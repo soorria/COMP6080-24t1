@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COMP6080 Google</title>
+
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-link {
+        color: gray;
+        text-decoration: none;
+        font-family: sans-serif;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        /* background-color: red;
+        margin: 16px; */
+      }
+
+      .main {
+        margin-top: 60px;
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+      }
+
+      .google-logo {
+        width: 300px;
+        height: auto;
+        /* object-fit: contain; */
+      }
+
+      .search-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .search-input {
+        width: 250px;
+        padding: 16px;
+        border-radius: 999999999px;
+      }
+
+      .search-button {
+        padding: 8px;
+        border: none;
+      }
+      .search-button:hover {
+        background: darkgray;
+        border: 2px solid black;
+        border-width: 2px;
+        border-color: black;
+        border-style: solid;
+      }
+
+      .footer {
+        height: 80px;
+        background-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div>
+        <a class="nav-link" href="/about">About</a>
+        <a class="nav-link" href="/about">Store</a>
+      </div>
+      <div>
+        <a class="nav-link" href="/about">Gmail</a>
+        <a class="nav-link" href="/about">Images</a>
+      </div>
+    </nav>
+
+    <main class="main">
+      <img class="google-logo" src="./google-logo.png" />
+
+      <form class="search-form">
+        <input class="search-input" type="search" />
+
+        <div>
+          <button class="search-button" type="submit">Google search</button>
+          <button class="search-button" type="button">I'm feeling lucky</button>
+        </div>
+      </form>
+    </main>
+
+    <footer class="footer"></footer>
+  </body>
+</html>
