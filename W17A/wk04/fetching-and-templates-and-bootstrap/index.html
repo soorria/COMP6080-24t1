@@ -21,9 +21,24 @@
 
     <!-- Our JS + CSS -->
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./main.js" async defer></script>
+
+    <script type="module" src="./main.js" async defer></script>
   </head>
   <body>
     <main class="container posts-list"></main>
+
+    <template id="post-card-template">
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <p class="card-byline"></p>
+          <a href="#" class="card-link btn btn-primary">See post details</a>
+        </div>
+      </div>
+    </template>
   </body>
 </html>
