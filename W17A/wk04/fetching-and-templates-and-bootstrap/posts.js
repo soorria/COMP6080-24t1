@@ -82,3 +82,36 @@ export const createPostElement = post => {
 
   return content
 }
+
+export const createPostElementJs = post => {
+  const card = document.createElement('div')
+  card.className = 'card'
+  card.style.width = '18rem'
+
+  const cardBody = document.createElement('div')
+  cardBody.className = 'card-body'
+  card.appendChild(cardBody)
+
+  const cardTitle = document.createElement('h5')
+  cardTitle.className = 'card-title'
+  cardTitle.textContent = post.title
+  cardBody.append(cardTitle)
+
+  const cardText = document.createElement('p')
+  cardText.className = 'card-text'
+  cardText.textContent = post.body
+  cardBody.append(cardText)
+
+  const byline = document.createElement('p')
+  byline.className = 'card-byline'
+  byline.textContent = post.user.name
+  cardBody.append(byline)
+
+  const cardLink = document.createElement('a')
+  byline.className = 'card-link btn btn-primary'
+  byline.textContent = 'See post details'
+  cardLink.href = `#${post.id}`
+  cardBody.append(cardLink)
+
+  return card
+}

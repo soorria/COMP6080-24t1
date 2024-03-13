@@ -1,4 +1,9 @@
-import { createPostElement, listPosts, listPostsWithUsers } from './posts.js'
+import {
+  createPostElement,
+  createPostElementJs,
+  listPosts,
+  listPostsWithUsers,
+} from './posts.js'
 
 listPosts()
 
@@ -9,7 +14,7 @@ const main = () => {
 
   listPostsWithUsers().then(posts => {
     posts.forEach(post => {
-      const element = createPostElement(post)
+      const element = createPostElementJs(post)
 
       postsListElement.append(element)
     })
